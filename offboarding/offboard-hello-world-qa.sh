@@ -3,7 +3,7 @@ set -e
 
 # Templated variables - replaced at onboarding
 APP_NAME="hello-world"
-NAMESPACE="essesseff-hello-world-flask-template"
+NAMESPACE="essesseff-hello-world-fastapi-template"
 ENV="qa"
 GITHUB_REPO_ID="{{REPOSITORY_ID}}"
 

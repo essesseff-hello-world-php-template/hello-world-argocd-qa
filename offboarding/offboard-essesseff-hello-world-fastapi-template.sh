@@ -2,7 +2,7 @@
 set -e
 
 # Templated variables - replaced at onboarding
-NAMESPACE="essesseff-hello-world-flask-template"
+NAMESPACE="essesseff-hello-world-fastapi-template"
 
 echo "=========================================="
 echo "⚠️  NAMESPACE OFFBOARDING WARNING ⚠️"
