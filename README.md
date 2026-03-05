@@ -4,7 +4,7 @@ This repository contains the Argo CD Application manifest for the **QA** environ
 
 It is ***not necessary*** to be an essesseff™ subscriber in order to make use of the standardized
 pattern and automation offered in this and corresponding code and config repositories for
-configuring and managing your FastAPI application to follow said standardized pattern of development, build, deployment and promotion through DEV -> QA -> STAGING -> PROD environments, although it should not surprise you that it will be much easier for essesseff™ subscribers to do so.
+configuring and managing your PHP application to follow said standardized pattern of development, build, deployment and promotion through DEV -> QA -> STAGING -> PROD environments, although it should not surprise you that it will be much easier for essesseff™ subscribers to do so.
 
 *Please Note:*
 
@@ -35,7 +35,7 @@ hello-world-argocd-qa/
 ├── ghcr-credentials-secret.yaml.template          # GHCR credentials (set once per K8s cluster for organization) template
 ├── notifications-configmap.yaml.template          # Argo CD notifications configuration template
 ├── offboarding/
-│   └── offboard-essesseff-hello-world-fastapi-template.sh # script for offboarding the essesseff-hello-world-fastapi-template namespace from K8s
+│   └── offboard-essesseff-hello-world-php-template.sh # script for offboarding the essesseff-hello-world-php-template namespace from K8s
 │   └── offboard-hello-world-qa.sh    # script for offboarding the hello-world qa app 1) from essesseff only or 2) from Argo CD and K8s entirely
 ├── setup-argocd-cluster.sh           # Argo CD K8s setup script 
 ├── setup-argocd.sh                   # Argo CD hello-world-qa essesseff app setup script 
@@ -62,7 +62,7 @@ hello-world-argocd-qa/
 
 1. **Git Clone This Repository**:
    ```bash
-   git clone git@github.com:essesseff-hello-world-fastapi-template/hello-world-argocd-qa.git
+   git clone git@github.com:essesseff-hello-world-php-template/hello-world-argocd-qa.git
    ```
    
 2. **Configure Environment Variables in .env File**:
@@ -124,7 +124,7 @@ hello-world-argocd-qa/
 
 6. **Access the Deployed Application**:
    ```bash
-   kubectl port-forward service/hello-world-qa 8081:80 -n essesseff-hello-world-fastapi-template
+   kubectl port-forward service/hello-world-qa 8081:80 -n essesseff-hello-world-php-template
    # Access: http://localhost:8081
    ```
 ### How to Offboard hello-world-qa Deployment from Argo CD and K8s
@@ -136,13 +136,13 @@ hello-world-argocd-qa/
    ./offboard-hello-world-qa.sh
    ```
 
-### How to Offboard essesseff-hello-world-fastapi-template K8s Namespace and All of its Resources
+### How to Offboard essesseff-hello-world-php-template K8s Namespace and All of its Resources
 
 1. **Execute the offboarding script**:
    ```bash
    cd offboarding
-   chmod 744 offboard-essesseff-hello-world-fastapi-template.sh
-   ./offboard-essesseff-hello-world-fastapi-template.sh
+   chmod 744 offboard-essesseff-hello-world-php-template.sh
+   ./offboard-essesseff-hello-world-php-template.sh
    ```
 
 ## Application Details
@@ -150,7 +150,7 @@ hello-world-argocd-qa/
 - **Name**: `hello-world-qa`
 - **Namespace**: `argocd`
 - **Source Repository**: `hello-world-config-qa`
-- **Destination Namespace**: `essesseff-hello-world-fastapi-template`
+- **Destination Namespace**: `essesseff-hello-world-php-template`
 - **Sync Policy**: Automated with prune and self-heal enabled
 
 ## Deployment Process
@@ -169,9 +169,9 @@ hello-world-argocd-qa/
 
 ## Repository URLs
 
-- **Source**: `https://github.com/essesseff-hello-world-fastapi-template/hello-world`
-- **Config QA**: `https://github.com/essesseff-hello-world-fastapi-template/hello-world-config-qa`
-- **Argo CD QA**: `https://github.com/essesseff-hello-world-fastapi-template/hello-world-argocd-qa` (this repo)
+- **Source**: `https://github.com/essesseff-hello-world-php-template/hello-world`
+- **Config QA**: `https://github.com/essesseff-hello-world-php-template/hello-world-config-qa`
+- **Argo CD QA**: `https://github.com/essesseff-hello-world-php-template/hello-world-argocd-qa` (this repo)
 
 ## essesseff Integration
 
