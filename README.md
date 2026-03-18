@@ -16,6 +16,8 @@ configuring and managing your PHP application to follow said standardized patter
 
 *Argo®, Helm®, Kubernetes® and K8s® are registered trademarks of The Linux Foundation.*
 
+***Note: it is highly recommended that, rather than going through all the steps here to configure Argo CD, that for convenience and faster turnaround time you instead use the [essesseff-onboarding-utility](https://github.com/essesseff/essesseff-onboarding-utility)***
+
 ## See Also
 
 - [essesseff Documentation](https://essesseff.com/docs) - essesseff platform documentation
@@ -51,6 +53,8 @@ hello-world-argocd-qa/
 ## Quick Start
 
 ### (if not done already) Deploy/Configure Argo CD on the Environment-specific Kubernetes Cluster 
+
+***Note: it is highly recommended that, rather than going through all the steps here to configure Argo CD, that for convenience and faster turnaround time you instead use the [essesseff-onboarding-utility](https://github.com/essesseff/essesseff-onboarding-utility)***
 
 1. **Run Argo CD cluster setup script**:
 ```bash
